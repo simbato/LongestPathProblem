@@ -1,0 +1,32 @@
+Pokretanje - \NajduziPutSucelje\bin\Debug\NajduziPutSucelje.exe
+
+Upute za korištenje:
+Klikom na gumb "Otvori" se otvara file dialog te treba uci u folder "sucelje_testovi" gdje se
+nalaze testovi te izabrati test koji zelite pokrenuti. Nakon sto je test izabran klikom na gumb 
+"Pokreni" se pokreće izvođenje programa. Kad program završi možete ponovo klikom na "Otvori" 
+izabrati novi test i pokrenut ga.
+
+(Ostali testovi su u folderu "test", ali neki od njih se ne mogu pokretat na windowsu zbog ograničenosti
+raspoložive memorije Visal Studia pa smo njih izostavili)
+
+
+
+Opis:
+NajduziPutSucelje - projket u VS - implementira sucelje u C#-u. 
+NPUGdll - projekt u VS - tu je uokvirena nasa implementacija algoritma, u dll projektu.
+	Bitne datoteke NPUGdll.h i NPUGdll.cpp. Ideja je da ovaj projekt nudi funkcije koje
+	ce pozivati projekt NajduziPutSucelje - tako je ostvarena komunikacija C# i C++ kodova.
+
+Kada se promijeni C++ kod, potrebno je u VS-u napraviti Build-Build Solution (projekt NPUGdll).
+Zatim, iz foldera \NPUGdll\Debug kopirati datoteku NPUGdll.dll u folder \NajduziPutSucelje\bin\Debug.
+
+Izvorni kod koji smo koristili i u implementaciji sučelja se nalazi u folderu "algoritmi", u datotekama:
+m_genetic.cpp
+m_genetic.h
+m_main.cpp
+
+Pokretanje na Windowsu: preko sučelja.
+
+Pokretanje iz Linuxa: python3 submit.py algoritmi/m_genetic
+Kompiliranje: /algoritmi> g++ m_main.cpp m_genetic.cpp -std=c++11 -o m_genetic
+

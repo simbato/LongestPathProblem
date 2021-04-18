@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++14 -O3 -DNDEBUG  -rdynamic CMakeFiles/lsp_unweighted.dir/main_read_from_stdin.cpp.o CMakeFiles/lsp_unweighted.dir/digraph.cpp.o CMakeFiles/lsp_unweighted.dir/pseudotopoorder.cpp.o CMakeFiles/lsp_unweighted.dir/helpers.cpp.o  -o lsp_unweighted 
